@@ -68,9 +68,9 @@ prep as (
       and pt.load_event_end is not null -- zero is acceptable
 
       -- remove rare outliers (Unix timestamp is more than twice what it should be)
-      and datediff(d, pt.root_tstamp, (timestamp 'epoch' + pt.response_end/1000 * interval '1 second ')) < 365
-      and datediff(d, pt.root_tstamp, (timestamp 'epoch' + pt.unload_event_start/1000 * interval '1 second ')) < 365
-      and datediff(d, pt.root_tstamp, (timestamp 'epoch' + pt.unload_event_end/1000 * interval '1 second ')) < 365
+      -- and datediff(d, pt.root_tstamp, (timestamp 'epoch' + pt.response_end/1000 * interval '1 second ')) < 365
+      -- and datediff(d, pt.root_tstamp, (timestamp 'epoch' + pt.unload_event_start/1000 * interval '1 second ')) < 365
+      -- and datediff(d, pt.root_tstamp, (timestamp 'epoch' + pt.unload_event_end/1000 * interval '1 second ')) < 365
 
 ),
 
