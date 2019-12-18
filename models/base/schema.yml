@@ -7,8 +7,6 @@ models:
     columns:      
         - name: app_id
           description: Application ID
-          tests: 
-              - not_null
           
         - name: platform
           description: Platform
